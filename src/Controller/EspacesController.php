@@ -12,7 +12,7 @@ class EspacesController extends AbstractController
     public function index(): Response
     {
         return $this->render('espaces/index.html.twig', [
-            'controller_name' => 'EspacesController',
+            'page' => 'Espaces',
         ]);
     }
 }

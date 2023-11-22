@@ -12,7 +12,7 @@ class AVenirController extends AbstractController
     public function index(): Response
     {
         return $this->render('a_venir/index.html.twig', [
-            'controller_name' => 'AVenirController',
+            'page' => 'A venir',
         ]);
     }
 }

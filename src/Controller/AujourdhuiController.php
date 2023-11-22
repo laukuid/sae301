@@ -12,7 +12,7 @@ class AujourdhuiController extends AbstractController
     public function index(): Response
     {
         return $this->render('aujourdhui/index.html.twig', [
-            'controller_name' => 'AujourdhuiController',
+            'page' => 'Aujourd\'hui',
         ]);
     }
 }
