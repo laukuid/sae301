@@ -1,132 +1,130 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
+    <style>
+.main-accueil{
+    width: calc(100vw - 355px);
+    height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+    margin-left: 5px;
+}
+.main-accueil .jour, .avenir{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: calc(45vh - 80px);
+    border-radius: 15px;
+    background-color: white;
+}
+.main-accueil .jour .nav-rendu, .main-accueil .avenir .nav-rendu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-accueil .jour .nav-rendu h4, .main-accueil .avenir .nav-rendu h4{
+    height: 100%;
+}
+.main-accueil .jour .bouton-control, .main-accueil .avenir .bouton-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.main-accueil .jour .bouton-control button, .main-accueil .avenir .bouton-control button{
+    background-color: #5495D8;
+}
+.main-accueil .jour button, .main-accueil .avenir button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+}
+.jour label, .avenir label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.jour h2, .avenir h2{
+    margin-bottom: 15px;
+}
+.liste-rendu{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 70%;
+    overflow: auto;
+}
+.jour ul .container-rendu, .avenir ul .container-rendu{
+    display: flex;
+    justify-content: space-between;
+}
+.jour ul .container-rendu .gauche, .avenir ul .container-rendu .gauche{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.notif-modif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.notif-modif button{
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+
+
+@media screen and (max-width: 910px){
+    .main-accueil{
+        width: 100vw;
+        margin: 20px 0px;
+        height: calc(100vh - 225px);
+    }
+    .main-accueil .jour, .avenir {
+        height: calc(40vh - 80px);
+    }
+    .main-accueil .jour button, .main-accueil .avenir button{
+        width: 35px;
+        height: 35px;
+      }
+@media screen and (max-width: 520px){
+    .jour h2, .avenir h2{
+        font-size: 18px;    
+    }
+    .notif-modif {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 30px;
+    }
+    .liste-rendu {
+        gap: 10px;
+    }
+}
+}
+
+
+</style>
 {% endblock %}
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
 
-    <style>
-        .main-accueil{
-            width: calc(100vw - 355px);
-            height: calc(100vh - 140px);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin: 20px;
-            margin-left: 5px;
-        }
-        .main-accueil .jour, .avenir{
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            height: calc(45vh - 80px);
-            border-radius: 15px;
-            background-color: white;
-        }
-        .main-accueil .jour .nav-rendu, .main-accueil .avenir .nav-rendu{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .main-accueil .jour .nav-rendu h4, .main-accueil .avenir .nav-rendu h4{
-            height: 100%;
-        }
-        .main-accueil .jour .bouton-control, .main-accueil .avenir .bouton-control{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .main-accueil .jour button, .main-accueil .avenir button{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 0px;
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
-        }
-        .jour label, .avenir label{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            font-weight: 600;
-        }
-        .jour h2, .avenir h2{
-            margin-bottom: 15px;
-        }
-        .liste-rendu{
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            height: 70%;
-            overflow: auto;
-        }
-        .jour ul .container-rendu, .avenir ul .container-rendu{
-            display: flex;
-            justify-content: space-between;
-        }
-        .jour ul .container-rendu .gauche, .avenir ul .container-rendu .gauche{
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .notif-modif{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .notif-modif button{
-            background-color: transparent;
-            border-radius: 0px;
-        }
-        .info-rendu{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .info-rendu .items{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            font-size: 14px;
-        }
-        .info-rendu .items img{
-            height: 20px;
-        }
 
-
-
-        @media screen and (max-width: 910px){
-            .main-accueil{
-                width: 100vw;
-                margin: 20px;
-            }
-            .jour h2, .avenir h2{
-                max-width: 185px;
-            }
-        }
-        @media screen and (max-width: 520px){
-            .notif-modif {
-                flex-direction: column;
-                justify-content: flex-start;
-                gap: 0px;
-            }
-        }
-
-
-    </style>
     <main class="main-accueil">
         <div class="jour">
             <div class="nav-rendu">
                 <h4>Rendus du jour</h4>
                 <div class="bouton-control">
                     <button><img src="{{ asset('assets/img/Filtre.svg') }}" alt=""></button>
-                    <button><img src="{{ asset('assets/img/ajout_rendu.svg') }}" alt=""></button>
                 </div>
             </div>
             <h2>Jeudi 23 novembre 2023</h2>
@@ -149,9 +147,9 @@
                                     <p>Heure limite : 18h /</p>
                                 </div>
                                 <div class="items">
-                                    <img src="{{ asset('assets/img/group.svg') }}group.svg" alt="">
+                                    <img src="{{ asset('assets/img/group.svg') }}" alt="">
                                     <p>Travail : Collaboratif /</p>
-                                </div>
+                                </div>              
                             </div>
                         </div>
                     </div>
@@ -180,7 +178,7 @@
                                 <div class="items">
                                     <img src="{{ asset('assets/img/group.svg') }}" alt="">
                                     <p>Travail : Collaboratif /</p>
-                                </div>
+                                </div>              
                             </div>
                         </div>
                     </div>
@@ -199,7 +197,7 @@
                                     <p>Développement Back /</p>
                                 </div>
                                 <div class="items">
-                                    <img src="{{ asset('assets/img/calendar_month') }}" alt="">
+                                    <img src="{{ asset('assets/img/calendar_month.svg') }}" alt="">
                                     <p>TP Séance 4 Symfony /</p>
                                 </div>
                                 <div class="items">
@@ -209,7 +207,7 @@
                                 <div class="items">
                                     <img src="{{ asset('assets/img/group.svg') }}" alt="">
                                     <p>Travail : Collaboratif /</p>
-                                </div>
+                                </div>              
                             </div>
                         </div>
                     </div>
@@ -228,7 +226,7 @@
                                     <p>Développement Back /</p>
                                 </div>
                                 <div class="items">
-                                    <img src="{{ asset('assets/img/calendar_month') }}" alt="">
+                                    <img src="{{ asset('assets/img/calendar_month.svg') }}" alt="">
                                     <p>TP Séance 4 Symfony /</p>
                                 </div>
                                 <div class="items">
@@ -238,7 +236,7 @@
                                 <div class="items">
                                     <img src="{{ asset('assets/img/group.svg') }}" alt="">
                                     <p>Travail : Collaboratif /</p>
-                                </div>
+                                </div>              
                             </div>
                         </div>
                     </div>
@@ -254,7 +252,6 @@
                 <h4>Rendus à venir</h4>
                 <div class="bouton-control">
                     <button><img src="{{ asset('assets/img/Filtre.svg') }}" alt=""></button>
-                    <button><img src="{{ asset('assets/img/ajout_rendu.svg') }}" alt=""></button>
                 </div>
             </div>
             <h2>Jeudi 23 novembre 2023</h2>
@@ -279,7 +276,7 @@
                                 <div class="items">
                                     <img src="{{ asset('assets/img/group.svg') }}" alt="">
                                     <p>Travail : Collaboratif /</p>
-                                </div>
+                                </div>              
                             </div>
                         </div>
                     </div>
@@ -308,13 +305,13 @@
                                 <div class="items">
                                     <img src="{{ asset('assets/img/group.svg') }}" alt="">
                                     <p>Travail : Collaboratif /</p>
-                                </div>
+                                </div>             
                             </div>
                         </div>
                     </div>
                     <div class="notif-modif">
                         <button><img src="{{ asset('assets/img/notifications_active.svg') }}" alt=""></button>
-                        <button><img src="{{ asset('assets/img/more_vert') }}" alt=""></button>
+                        <button><img src="{{ asset('assets/img/more_vert.svg') }}" alt=""></button>
                     </div>
                 </li>
                 <li class="container-rendu">
@@ -337,7 +334,36 @@
                                 <div class="items">
                                     <img src="{{ asset('assets/img/group.svg') }}" alt="">
                                     <p>Travail : Collaboratif /</p>
+                                </div>              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notif-modif">
+                        <button><img src="{{ asset('assets/img/notifications_active.svg') }}" alt=""></button>
+                        <button><img src="{{ asset('assets/img/more_vert.svg') }}" alt=""></button>
+                    </div>
+                </li>
+                <li class="container-rendu">
+                    <div class="gauche">
+                        <label><input type="checkbox">Séance 4 Symfony</label>
+                        <div class="container-info">
+                            <div class="info-rendu">
+                                <div class="items">
+                                    <img src="{{ asset('assets/img/school.svg') }}" alt="">
+                                    <p>Développement Back /</p>
                                 </div>
+                                <div class="items">
+                                    <img src="{{ asset('assets/img/calendar_month.svg') }}" alt="">
+                                    <p>TP Séance 4 Symfony /</p>
+                                </div>
+                                <div class="items">
+                                    <img src="{{ asset('assets/img/schedule.svg') }}" alt="">
+                                    <p>Heure limite : 18h /</p>
+                                </div>
+                                <div class="items">
+                                    <img src="{{ asset('assets/img/group.svg') }}" alt="">
+                                    <p>Travail : Collaboratif /</p>
+                                </div>              
                             </div>
                         </div>
                     </div>

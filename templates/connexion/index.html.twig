@@ -1,20 +1,26 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello ConnexionController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Page : {{ page }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/sae301/src/Controller/ConnexionController.php'|file_link(0) }}">src/Controller/ConnexionController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/sae301/templates/connexion/index.html.twig'|file_link(0) }}">templates/connexion/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('/assets/css/global.css') }}">
+    <title>Connection</title>
+</head>
+<body>
+    <div class=formcontainer>
+        <form action="" method="post">
+            <h1>Connection</h1>
+            <div class="champ">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" required="">
+            </div>
+            <div class="champ">
+                <label for="password">Mot de passe*</label>
+                <input type="password" name="password" id="password" required="">
+            </div>
+            <input type="submit" name="Envoyer" class="butt-envoyer" value="Submit">
+            <p>Vous n'avez pas de compte ? <a href="{{path('app_inscription')}}">Inscrivez-vous</a></p>
+        </form>
+    </div> 
+</body>
+</html>

@@ -1,7 +1,207 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProfilController!{% endblock %}
+{% block title %}Profil{% endblock %}
 
 {% block body %}
-    <h1>Page : {{ page }}! ✅</h1>
+    <style>
+        .main-profil{
+            background-color: white;
+            border-radius: 15px;
+            width: calc(100vw - 355px);
+            height: calc(100vh - 140px);
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            margin-left: 5px;
+        }
+        .Profil{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            height: 100%;
+        }
+        .Profil input, .Profil select{
+            width: 190px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #5495D8;
+            background-color: white;
+        }
+        #PP{
+            border: none;
+        }
+        #TP{
+            width: 216px;
+        }
+        .Profil form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .Profil form .champ_profil{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 530px;
+        }
+        .Profil form .champ_profil .info_profil{
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            width: 215px;
+        }
+        .Profil form .champ_profil .info_profil label{
+            font-size: 18px;
+        }
+        .Profil form .champ_profil .info_profil p{
+            color: #555555;
+            font-family: 'Open Sans', sans-serif ;
+            font-size: 14px;
+        }
+        .Profil form .champ_profil .PPposition{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .Profil form .champ_profil .PPposition img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .boutton_profil{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 530px;
+            gap: 10px;
+        }
+        .rouge{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .sup, .out{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            background-color: #D81E1E;
+            color: white;
+            border: none;
+        }
+        .sup img{
+            width: 20px;
+            height: 20px;
+        }
+        @media screen and (max-width: 910px){
+            .main-profil{
+                width: 100vw;
+                margin: 0px;
+                margin-top: 20px;
+                height: calc(100vh - 205px);
+            }
+            .Profil h3{
+                display: none;
+            }
+            .Profil form{
+                align-items: center;
+            }
+            .Profil form .champ_profil .info_profil p{
+                display: none;
+            }
+            .Profil form .champ_profil{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80vw;
+            }
+            .boutton_profil{
+            width: 80vw;
+            }
+        }
+        @media screen and (max-width: 435px){
+            .main-profil{
+                border-radius: 0px;
+            }
+            .Profil form .champ_profil .info_profil{
+            width: 40vw;
+            }
+        }
+    </style>
+<div class="main-profil">
+<div class="Profil">
+        <h3>Profil</h3>
+        <h4>Préférences du profil</h4>
+        <form action="" method="post">
+                <div class="champ_profil">
+                    <div class="info_profil">
+                        <label for="PP">Photo</label>
+                        <p>Votre photo</p>
+                    </div>
+                    <div class="PPposition">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/27/14/25/burger-2013191_1280.png" alt="">
+                        <input type="file" name="PP" id="PP" required="">
+                    </div>
+                </div>
+                <div class="champ_profil">
+                    <div class="info_profil">
+                        <label for="name">Nom</label>
+                        <p>Jon</p>
+                    </div>
+                    <input type="text" name="name" id="name" required="" placeholder="Jon">
+                </div>
+                <div class="champ_profil">
+                    <div class="info_profil">
+                        <label for="name">Prenom</label>
+                        <p>Do</p>
+                    </div>
+                    <input type="text" name="prenom" id="prenom" required="" placeholder="Do">
+                </div>
+            <div class="champ_profil">
+                <div class="info_profil">
+                    <label for="TP">Votre TP</label>
+                    <p>TP_C</p>
+                </div> 
+                <select name="TP" id="TP">
+                    <option value="TP_A">TP A</option>
+                    <option value="TP_B">TP B</option>
+                    <option value="TP_C">TP C</option>
+                    <option value="TP_D">TP D</option>
+                    <option value="TP_E">TP E</option>
+                    <option value="TP_F">TP F</option>
+                    <option value="TP_G">TP G</option>
+                    <option value="TP_H">TP H</option>
+                </select>
+            </div>
+            <div class="champ_profil">
+                <div class="info_profil">
+                    <label for="email">Email</label>
+                    <p>john.doe@etudiant.univ-reims.fr</p>
+                </div>
+                <input type="email" name="email" id="email" required="" placeholder="john.doe@etudiant.univ-reims.fr">
+            </div>
+            <div class="champ_profil">
+                <div class="info_profil">
+                    <label for="password">Mot de passe</label>
+                    <p>123456789</p>
+                </div>
+                <input type="password" name="password" id="password" required="" placeholder="123456789">
+            </div>
+            <div class="boutton_profil">
+                <div class="rouge">
+                    <button class="sup"><img src="{{ asset('assets/img/close.svg') }}" alt=""></button>
+                    <button class="out"><img src="{{ asset('assets/img/logout.svg') }}" alt=""></button>
+                </div>
+                <input type="submit" name="Envoyer" class="butt-envoyer" value="Enregistrer les modifications">
+            </div>
+        </form>
+</div>
+</div>
 {% endblock %}

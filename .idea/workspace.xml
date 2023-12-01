@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae1d13a-a99a-4991-820f-15c921021514" name="Changes" comment="jour 2">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/rendu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/accueil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/mosaique.js" afterDir="false" />
+    <list default="true" id="1ae1d13a-a99a-4991-820f-15c921021514" name="Changes" comment="Jour 4 :&#10;développement de nicolas sur la page accueil ainsi que création de la bar de nav">
+      <change afterPath="$PROJECT_DIR$/public/assets/css/accueil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/rendu.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/rendu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/Filtre.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/Filtre.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/ajout_rendu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/ajout_rendu.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/mosaique.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/mosaique.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AVenirController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AujourdhuiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EspacesController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/a_venir/index.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accueil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accueil/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/aujourdhui/index.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/connexion/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/espaces/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inscription/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inscription/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profil/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rendu/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendu/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +34,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -167,6 +187,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;//wsl$/Debian/root/buts3/www/sae301&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -202,7 +223,22 @@
       <workItem from="1700680473118" duration="6507000" />
       <workItem from="1700722941302" duration="12788000" />
       <workItem from="1700750544250" duration="12263000" />
-      <workItem from="1700814614187" duration="8478000" />
+      <workItem from="1700814614187" duration="8575000" />
+      <workItem from="1700931229571" duration="744000" />
+      <workItem from="1700953537760" duration="1780000" />
+      <workItem from="1700996808545" duration="15582000" />
+      <workItem from="1701074112290" duration="9577000" />
+      <workItem from="1701089519771" duration="9123000" />
+      <workItem from="1701160499661" duration="6280000" />
+      <workItem from="1701176776692" duration="2360000" />
+      <workItem from="1701188308924" duration="1191000" />
+      <workItem from="1701209428762" duration="1733000" />
+      <workItem from="1701246780335" duration="550000" />
+      <workItem from="1701268328919" duration="2100000" />
+      <workItem from="1701290544598" duration="24000" />
+      <workItem from="1701323083672" duration="1860000" />
+      <workItem from="1701338593405" duration="15852000" />
+      <workItem from="1701437024481" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="jour 2">
       <created>1700636712157</created>
@@ -211,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700636712157</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Jour 4 :&#10;développement de nicolas sur la page accueil ainsi que création de la bar de nav">
+      <created>1700825599477</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700825599477</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +262,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jour 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="jour 2" />
+    <MESSAGE value="Jour 4 :&#10;développement de nicolas sur la page accueil ainsi que création de la bar de nav" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jour 4 :&#10;développement de nicolas sur la page accueil ainsi que création de la bar de nav" />
   </component>
 </project>

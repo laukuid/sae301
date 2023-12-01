@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'id': 1,
                 'name': 'Les inconnus',
                 'cours': 'Expression, communication et rhétorique',
-                'date': '24 décembre 2023',
+                'date': '2023-11-10',
                 'type': 'Moodle',
                 'collaboratif': 'individuel'
             },
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'id': 2,
                 'name': 'Etude de la consommation numérique',
                 'cours': 'Economie, gestion et droit du numérique',
-                'date': '',
+                'date': '2023-10-10',
                 'type': 'Mail',
                 'collaboratif': 'collaboration'
             },
@@ -21,7 +21,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 'id': 3,
                 'name': 'sortir dans l\'aube',
                 'cours': 'Création et design interactif (UI)',
-                'date': '29 décembre 2023',
+                'date': '2023-01-10',
+                'type': 'Mail',
+                'collaboratif': 'individuel'
+            },
+            {
+                'id': 4,
+                'name': 'sortir dans l\'aube',
+                'cours': 'Création et design interactif (UI)',
+                'date': '2023-01-10',
+                'type': 'Mail',
+                'collaboratif': 'individuel'
+            },
+            {
+                'id': 5,
+                'name': 'sortir dans l\'aube',
+                'cours': 'Création et design interactif (UI)',
+                'date': '2023-01-10',
+                'type': 'Mail',
+                'collaboratif': 'individuel'
+            },
+            {
+                'id': 6,
+                'name': 'sortir dans l\'aube',
+                'cours': 'Création et design interactif (UI)',
+                'date': '2023-01-10',
+                'type': 'Mail',
+                'collaboratif': 'individuel'
+            },
+            {
+                'id': 7,
+                'name': 'sortir dans l\'aube',
+                'cours': 'Création et design interactif (UI)',
+                'date': '2023-01-10',
                 'type': 'Mail',
                 'collaboratif': 'individuel'
             }
@@ -63,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             article.classList.add('product')
             const deleteButton = document.createElement('button')
             deleteButton.classList.add('supprimer')
-            deleteButton.innerText = '❌'
+            deleteButton.innerHTML = '<img src="/assets/img/delete.svg" alt="">';
             deleteButton.addEventListener('click', () => {
                 const index = datas.findIndex(item => item.id === product.id)
                 if (index !== -1) {
@@ -74,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             const editButton = document.createElement('button')
             editButton.classList.add('modifier')
-            editButton.innerText = '✎'
+            editButton.innerHTML = '<img src="/assets/img/contract_edit.svg" alt="">'
             editButton.addEventListener('click', () => {
                 openEditModal(product)
             })
@@ -86,21 +118,26 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             article.innerHTML = `
-                <div class="contenu">
-                    
-                    <h3>Projet : ${product.name}</h3>
-                    <p>Matière : ${product.cours}</p>
-                    <p>Date de rendu : ${product.date}</p>
-                    <p>Type de rendu : ${product.type}</p>
-                    <p>travail : ${product.collaboratif}</p>
-                    <div>
-                        <label for="fait">mettre un rappel</label>
-                        <input type="checkbox" id="fait" name="fait" value="fait"/>
-                    </div>
+                <div class="contenu_rendu">    
+                    <div class="rendu_placement">
+                        <h2> ${product.cours}</h2>
+                        <h3>${product.name}</h3>
+                        <div class="jppplacement">
+                            <div class="info-rendu">
+                                <p class="items"><img src="/assets/img/calendar_month.svg" height="20px" alt=""> ${product.date}</p>
+                                <p class="items"><img src="/assets/img/event_upcoming.svg" height="20px" alt=""> ${product.type}</p>
+                                <p class="items"><img src="/assets/img/group.svg" height="20px" alt=""> ${product.collaboratif}</p>
+                            <div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="bouton_rendu_article">
+
                 </div>
             `
-            article.querySelector('.contenu').appendChild(deleteButton)
-            article.querySelector('.contenu').appendChild(editButton)
+            article.querySelector('.bouton_rendu_article').appendChild(deleteButton)
+            article.querySelector('.bouton_rendu_article').appendChild(editButton)
             panier.appendChild(article)
         })
     }

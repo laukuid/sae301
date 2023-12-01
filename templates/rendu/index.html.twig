@@ -1,117 +1,161 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('assets/css/rendu.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/global.css') }}">
 {% endblock %}
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Rendus{% endblock %}
 
 {% block body %}
 
 
-    <div class="main-accueil">
-        <div id="panier">
+    <div class="main-rendu">
+            <div class="nav-rendu">
+                <h4>Rendus par matières</h4>
+                <div class="bouton-controlle">
+                    <button><img src="{{ asset('assets/img/Filtrew.svg') }}" alt=""></button>
+                    <button id="openModalButton"><img src="{{ asset('assets/img/ajout_renduw.svg') }}" alt=""></button>
+                </div>
+            </div>
+            <div id="panier">
 
-        </div>
+            </div>
+
+
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+            
+                    <div class="ajout_rendu">
+                        <div class="placementclose"><button class="close"><img src="{{ asset('assets/img/close.svg') }}" alt=""></button></div>
+                        <form id="editForm">
+                            <h2>Modifier le rendu</h2>
+                            <div class="champ">
+                                <label for="editNom">Intitulé :</label>
+                                <input type="text" id="editNom" name="nom">
+                            </div>
+                            <div class="champ">
+                                <label for="editDate">Date :</label>
+                                <input type="date" id="editDate" name="date">
+                            </div>
+                            <div class="champ">
+                                <label for="editCours">Matière : </label>
+                                <select name="editCours" id="editCours">
+                                    <option value="">--Choisir une matière--</option>
+                                    <option value="Anglais">Anglais</option>
+                                    <option value="Culture artistique">Culture artistique</option>
+                                    <option value="Culture numérique">Culture numérique</option>
+                                    <option value="Anglais Renforcé ou LV2">Anglais Renforcé ou LV2</option>
+                                    <option value="Design d'expérience">Design d'expérience</option>
+                                    <option value="Stratégies de communication et marketing">Stratégies de communication et marketing</option>
+                                    <option value="Référencement">Référencement</option>
+                                    <option value="Expression, communication et rhétorique">Expression, communication et rhétorique</option>
+                                    <option value="Création et design interactif (UI)">Création et design interactif (UI)</option>
+                                    <option value="Audiovisuel et Motion design">Audiovisuel et Motion design</option>
+                                    <option value="Développement Front et intégration">Développement Front et intégration</option>
+                                    <option value="Développement Back">Développement Back</option>
+                                    <option value="Déploiement de services">Déploiement de services</option>
+                                    <option value="Représentation et traitement de l'information">Représentation et traitement de l'information
+                                    </option>
+                                    <option value="Gestion de projet">Gestion de projet</option>
+                                    <option value="Economie, gestion et droit du numérique">Economie, gestion et droit du numérique</option>
+                                    <option value="Projet Personnel et Professionnel">Projet Personnel et Professionnel</option>
+                                    <option value="Symfony">Symfony</option>
+                                </select>
+                            </div>
+                            <div class="champ">
+                                <label for="editType">Type de travail : </label>
+                                <select id="editType" name="editType">
+                                    <option value="">-- Choisissez un type --</option>
+                                    <option value="Mail">mail</option>
+                                    <option value="Oral">Oral</option>
+                                    <option value="Moodle">Moodle</option>
+                                </select>
+                            </div>
+                            <div class="champ">
+                                <label for="editCollaboratif">Travail collaboratif : </label>
+                                <input type="checkbox" id="editCollaboratif" name="editCollaboratif">
+                            </div>
+                            <button class="validemodif" type="submit">Modifier</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal2" class="modal2">
+                <div class="modal-content2">
+                    <div class="placementclose"><button id="closeModalButton"><img src="{{ asset('assets/img/close.svg') }}" alt=""></button></div>
+                    <div class="ajout_rendu">
+                        <form class="rendu">
+                            <h2>Ajouter un rendu</h2>
+                            <div class="champ">
+                                <label for="nom">Intitulé*</label>
+                                <input type="text" name="nom" id="nom" required="">
+                            </div>
+                            <div class="champ">
+                                <label for="nom">Date*</label>
+                                <input type="date" name="date" id="date" required="">
+                            </div>
+                            <div class="champ">
+                                <label for="cours">Matière*</label>
+                                <select name="cours" id="cours" required="">
+                                    <option value="">--Choisir une matière--</option>
+                                    <option value="Anglais">Anglais</option>
+                                    <option value="Culture artistique">Culture artistique</option>
+                                    <option value="Culture numérique">Culture numérique</option>
+                                    <option value="Anglais Renforcé ou LV2">Anglais Renforcé ou LV2</option>
+                                    <option value="Design d'expérience">Design d'expérience</option>
+                                    <option value="Stratégies de communication et marketing">Stratégies de communication et marketing</option>
+                                    <option value="Référencement">Référencement</option>
+                                    <option value="Expression, communication et rhétorique">Expression, communication et rhétorique</option>
+                                    <option value="Création et design interactif (UI)">Création et design interactif (UI)</option>
+                                    <option value="Audiovisuel et Motion design">Audiovisuel et Motion design</option>
+                                    <option value="Développement Front et intégration">Développement Front et intégration</option>
+                                    <option value="Développement Back">Développement Back</option>
+                                    <option value="Déploiement de services">Déploiement de services</option>
+                                    <option value="Représentation et traitement de l'information">Représentation et traitement de l'information
+                                    </option>
+                                    <option value="Gestion de projet">Gestion de projet</option>
+                                    <option value="Economie, gestion et droit du numérique">Economie, gestion et droit du numérique</option>
+                                    <option value="Projet Personnel et Professionnel">Projet Personnel et Professionnel</option>
+                                    <option value="Symfony">Symfony</option>
+                                </select>
+                            </div>
+                            <div class="champ">
+                                <label for="type">Type de travail*</label>
+                                <select id="type" name="type" required="">
+                                    <option value="">-- Choisissez un type --</option>
+                                    <option value="Mail">mail</option>
+                                    <option value="Oral">Oral</option>
+                                    <option value="Moodle">Moodle</option>
+                                </select>
+                            </div>
+                            <div class="champ">
+                                <label for="collaboratif">Travail Collaboratif*</label>
+                                <input type="checkbox" id="collaboratif" name="collaboratif">
+                            </div>
+                            <button id="ajouter">Ajouter</button>
+                        </form>
+                    </div>
+
+
+
+                </div>
+            </div>
+            
     </div>
 
-    <div class="ajout_rendu">
-        <p>Ajouter rendu</p>
-        <form class="rendu">
-            <label for="nom">Intitulé : </label>
-            <input type="text" name="nom" id="nom">
-            <label for="date">Date : </label>
-            <input type="date" id="date">
-            <label for="cours">Matière : </label>
-            <select name="cours" id="cours">
-                <option value="">--Choisir une matière--</option>
-                <option value="Anglais">Anglais</option>
-                <option value="Culture artistique">Culture artistique</option>
-                <option value="Culture numérique">Culture numérique</option>
-                <option value="Anglais Renforcé ou LV2">Anglais Renforcé ou LV2</option>
-                <option value="Design d'expérience">Design d'expérience</option>
-                <option value="Stratégies de communication et marketing">Stratégies de communication et marketing</option>
-                <option value="Référencement">Référencement</option>
-                <option value="Expression, communication et rhétorique">Expression, communication et rhétorique</option>
-                <option value="Création et design interactif (UI)">Création et design interactif (UI)</option>
-                <option value="Audiovisuel et Motion design">Audiovisuel et Motion design</option>
-                <option value="Développement Front et intégration">Développement Front et intégration</option>
-                <option value="Développement Back">Développement Back</option>
-                <option value="Déploiement de services">Déploiement de services</option>
-                <option value="Représentation et traitement de l'information">Représentation et traitement de l'information
-                </option>
-                <option value="Gestion de projet">Gestion de projet</option>
-                <option value="Economie, gestion et droit du numérique">Economie, gestion et droit du numérique</option>
-                <option value="Projet Personnel et Professionnel">Projet Personnel et Professionnel</option>
-                <option value="Symfony">Symfony</option>
-            </select>
-            <label for="type">Type de travail : </label>
-            <select id="type" name="type">
-                <option value="">-- Choisissez un type --</option>
-                <option value="Mail">mail</option>
-                <option value="Oral">Oral</option>
-                <option value="Moodle">Moodle</option>
-                <option value="Moodle">Moodle</option>
-                <!-- Ajoutez d'autres options selon vos besoins -->
-            </select>
 
-            <label for="collaboratif">Travail collaboratif : </label>
-            <input type="checkbox" id="collaboratif" name="collaboratif">
-            <button id="ajouter">Ajouter</button>
-        </form>
-    </div>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <button class="close">&times;</button>
-            <h2>Modifier l'article</h2>
-            <form id="editForm">
-                <label for="editNom">Intitulé :</label>
-                <input type="text" id="editNom" name="nom"><br>
-                <label for="editDate">Date :</label>
-                <input type="date" id="editDate" name="date"><br>
-                <label for="editCours">Matière : </label>
-                <select name="editCours" id="editCours">
-                    <option value="">--Choisir une matière--</option>
-                    <option value="Anglais">Anglais</option>
-                    <option value="Culture artistique">Culture artistique</option>
-                    <option value="Culture numérique">Culture numérique</option>
-                    <option value="Anglais Renforcé ou LV2">Anglais Renforcé ou LV2</option>
-                    <option value="Design d'expérience">Design d'expérience</option>
-                    <option value="Stratégies de communication et marketing">Stratégies de communication et marketing</option>
-                    <option value="Référencement">Référencement</option>
-                    <option value="Expression, communication et rhétorique">Expression, communication et rhétorique</option>
-                    <option value="Création et design interactif (UI)">Création et design interactif (UI)</option>
-                    <option value="Audiovisuel et Motion design">Audiovisuel et Motion design</option>
-                    <option value="Développement Front et intégration">Développement Front et intégration</option>
-                    <option value="Développement Back">Développement Back</option>
-                    <option value="Déploiement de services">Déploiement de services</option>
-                    <option value="Représentation et traitement de l'information">Représentation et traitement de l'information
-                    </option>
-                    <option value="Gestion de projet">Gestion de projet</option>
-                    <option value="Economie, gestion et droit du numérique">Economie, gestion et droit du numérique</option>
-                    <option value="Projet Personnel et Professionnel">Projet Personnel et Professionnel</option>
-                    <option value="Symfony">Symfony</option>
-                </select><br>
-                <label for="editType">Type de travail : </label>
-                <select id="editType" name="editType">
-                    <option value="">-- Choisissez un type --</option>
-                    <option value="Mail">mail</option>
-                    <option value="Oral">Oral</option>
-                    <option value="Moodle">Moodle</option>
-                    <option value="Moodle">Moodle</option>
-                    <!-- Ajoutez d'autres options selon vos besoins -->
-                </select><br>
+    <script>
+        document.getElementById('openModalButton').addEventListener('click', function () {
+            var modal = document.getElementById('modal2');
+            modal.style.display = 'block';
+        });
 
-                <label for="editCollaboratif">Travail collaboratif : </label>
-                <input type="checkbox" id="editCollaboratif" name="editCollaboratif"><br>
-                <!-- Ajoutez les autres champs pour la modification -->
-                <button type="submit">Modifier</button>
-            </form>
-        </div>
-    </div>
-
-
-
-
-
+        document.getElementById('closeModalButton').addEventListener('click', function () {
+        var modal = document.getElementById('modal2');
+        modal.style.display = 'none';
+    });
+    </script>
 
 
 {% endblock %}
