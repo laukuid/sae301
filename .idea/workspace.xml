@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ae1d13a-a99a-4991-820f-15c921021514" name="Changes" comment="Jour 4 :&#10;développement de nicolas sur la page accueil ainsi que création de la bar de nav">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/accueil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/global.css" afterDir="false" />
+    <list default="true" id="1ae1d13a-a99a-4991-820f-15c921021514" name="Changes" comment="finalisation des pages en css : Accueil, Rendu, Buts3, Profil, connexion, deconnexion. par nicolas &#10;fonctionnalités : rendu, buts3, calendrier par guillaume et personnel par nicolas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/rendu.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/rendu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/Filtre.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/Filtre.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/ajout_rendu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/ajout_rendu.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/js/mosaique.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/mosaique.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AVenirController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AujourdhuiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EspacesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/a_venir/index.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accueil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accueil/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/aujourdhui/index.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/connexion/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/connexion/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/espaces/index.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/inscription/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inscription/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profil/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/rendu/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rendu/index.html.twig" afterDir="false" />
@@ -41,6 +30,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -176,6 +168,9 @@
       <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
     </include_path>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2YToqx08sF79Wa9j218M767GLUs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -186,6 +181,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;//wsl$/Debian/root/buts3/www/sae301&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -238,7 +234,11 @@
       <workItem from="1701290544598" duration="24000" />
       <workItem from="1701323083672" duration="1860000" />
       <workItem from="1701338593405" duration="15852000" />
-      <workItem from="1701437024481" duration="310000" />
+      <workItem from="1701437024481" duration="2328000" />
+      <workItem from="1701439496620" duration="1591000" />
+      <workItem from="1701514220375" duration="8161000" />
+      <workItem from="1701538578897" duration="9264000" />
+      <workItem from="1701592133221" duration="10995000" />
     </task>
     <task id="LOCAL-00001" summary="jour 2">
       <created>1700636712157</created>
@@ -254,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700825599477</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finalisation des pages en css : Accueil, Rendu, Buts3, Profil, connexion, deconnexion. par nicolas &#10;fonctionnalités : rendu, buts3, calendrier par guillaume et personnel par nicolas">
+      <created>1701437526733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701437526735</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +270,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jour 2" />
     <MESSAGE value="Jour 4 :&#10;développement de nicolas sur la page accueil ainsi que création de la bar de nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jour 4 :&#10;développement de nicolas sur la page accueil ainsi que création de la bar de nav" />
+    <MESSAGE value="finalisation des pages en css : Accueil, Rendu, Buts3, Profil, connexion, deconnexion. par nicolas &#10;fonctionnalités : rendu, buts3, calendrier par guillaume et personnel par nicolas" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalisation des pages en css : Accueil, Rendu, Buts3, Profil, connexion, deconnexion. par nicolas &#10;fonctionnalités : rendu, buts3, calendrier par guillaume et personnel par nicolas" />
   </component>
 </project>

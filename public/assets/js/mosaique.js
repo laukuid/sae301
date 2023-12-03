@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'products': [
             {
                 'id': 1,
-                'name': 'Les inconnus',
+                'name': 'Les Invisibles',
                 'cours': 'Expression, communication et rhétorique',
                 'date': '2023-11-10',
                 'type': 'Moodle',
@@ -19,42 +19,42 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 'id': 3,
-                'name': 'sortir dans l\'aube',
-                'cours': 'Création et design interactif (UI)',
-                'date': '2023-01-10',
-                'type': 'Mail',
+                'name': 'Komola',
+                'cours': 'Développement Front et intégration',
+                'date': '2024-01-03',
+                'type': 'Moodle',
                 'collaboratif': 'individuel'
             },
             {
                 'id': 4,
-                'name': 'sortir dans l\'aube',
+                'name': 'Sortir dans l\'aube',
                 'cours': 'Création et design interactif (UI)',
-                'date': '2023-01-10',
-                'type': 'Mail',
+                'date': '2023-29-12',
+                'type': 'Moodle',
                 'collaboratif': 'individuel'
             },
             {
                 'id': 5,
-                'name': 'sortir dans l\'aube',
-                'cours': 'Création et design interactif (UI)',
-                'date': '2023-01-10',
-                'type': 'Mail',
-                'collaboratif': 'individuel'
+                'name': 'Spot publicitaire',
+                'cours': 'Audiovisuel et Motion design',
+                'date': '2023-24-12',
+                'type': 'Moodle',
+                'collaboratif': 'collaboration'
             },
             {
                 'id': 6,
-                'name': 'sortir dans l\'aube',
-                'cours': 'Création et design interactif (UI)',
+                'name': 'chaîne twitch',
+                'cours': 'Audiovisuel et Motion design',
                 'date': '2023-01-10',
-                'type': 'Mail',
-                'collaboratif': 'individuel'
+                'type': 'Moodle',
+                'collaboratif': 'collaboration'
             },
             {
                 'id': 7,
-                'name': 'sortir dans l\'aube',
-                'cours': 'Création et design interactif (UI)',
-                'date': '2023-01-10',
-                'type': 'Mail',
+                'name': 'podcast',
+                'cours': 'Culture numérique',
+                'date': '2024-12-01',
+                'type': 'Moodle',
                 'collaboratif': 'individuel'
             }
         ]
@@ -115,8 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Fermer la fenêtre modale en cachant son élément parent
                 const modal = document.getElementById('modal');
                 modal.style.display = 'none';
+
             });
 
+            localStorage.setItem('products', JSON.stringify(product));
             article.innerHTML = `
                 <div class="contenu_rendu">    
                     <div class="rendu_placement">
@@ -139,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             article.querySelector('.bouton_rendu_article').appendChild(deleteButton)
             article.querySelector('.bouton_rendu_article').appendChild(editButton)
             panier.appendChild(article)
+
         })
     }
 

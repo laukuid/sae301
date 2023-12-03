@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="auteur : nicolas, guillaume, kevin."/>
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="{{ asset('/assets/img/favicon.svg') }}" type="image/x-icon">
@@ -17,39 +18,39 @@
 </head>
 <body>
 <nav class="nav-ordinateur">
-        <img class="Hamburger_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/32px-Hamburger_icon.svg.png" alt="">
+        <img class="Hamburger_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/32px-Hamburger_icon.svg.png" alt="burger">
         <a href="{{path('app_accueil')}}" class="logo">
-            <img src="{{ asset('/assets/img/logow.svg') }}" alt="">
+            <img src="{{ asset('/assets/img/logow.svg') }}" alt="logoWhite">
         </a>
         <input type="text" name="recherche" class="recherche" placeholder="Rechercher..." required="">
         <div class="profil">
             <a href="{{path('app_profil')}}" class="utilisateur">Bonjour Jon Do</a>
-            <img src="https://cdn.pixabay.com/photo/2017/01/27/14/25/burger-2013191_1280.png" alt="">
+            <img src="https://cdn.pixabay.com/photo/2017/01/27/14/25/burger-2013191_1280.png" alt="photoProfil">
         </div>
     </nav>
     <nav class="nav-mobile">
             <a href="{{path('app_accueil')}}" class="logo">
-                <img src="{{ asset('/assets/img/logo.svg') }}" alt="">
+                <img src="{{ asset('/assets/img/logo.svg') }}" alt="logo">
             </a>
         <ul>
-            <span></span>
-            <li><a href="{{path('app_accueil')}}"><img src="{{ asset('assets/img/home.svg') }}" alt=""><p>Accueil</p></a></li>
-            <li><a href="{{path('app_planning')}}"><img src="{{ asset('assets/img/calendar_month.svg') }}" alt=""><p>Calendrier</p></a></li>
-            <li><a href="{{path('app_rendu')}}"><img src="{{ asset('assets/img/event_upcoming.svg') }}" alt=""><p>Rendus</p></a></li>
-            <span></span>
+            <li><span></span></li>
+            <li><a href="{{path('app_accueil')}}"><img src="{{ asset('assets/img/home.svg') }}" alt="accueil"><p>Accueil</p></a></li>
+            <li><a href="{{path('app_planning')}}"><img src="{{ asset('assets/img/calendar_month.svg') }}" alt="calendriers"><p>Calendrier</p></a></li>
+            <li><a href="{{path('app_rendu')}}"><img src="{{ asset('assets/img/event_upcoming.svg') }}" alt="evenements"><p>Rendus</p></a></li>
+            <li><span></span></li>
             <div class="bouton-menu-deroulant" onclick="togglemenuderoulant()">
                 <h3>Espaces</h3>
-                <img id="expandIcon" src="{{ asset('assets/img/expand_more.svg') }}" alt="">
+                <img id="expandIcon" src="{{ asset('assets/img/expand_more.svg') }}" alt="voir plus">
             </div>
             <div class="espaces">
                 <ul class="menu-deroulant">
-                    <li><a href="{{path('app_buts3')}}"><img src="{{ asset('assets/img/school.svg') }}" alt=""><p>BUT S3</p></a></li>
-                    <li><a href="{{path('app_personnel')}}"><img src="{{ asset('assets/img/folder_shared.svg') }}" alt=""><p>Personnel</p></a></li>
+                    <li><a href="{{path('app_buts3')}}"><img src="{{ asset('assets/img/school.svg') }}" alt="écoles"><p>BUT S3</p></a></li>
+                    <li><a href="{{path('app_personnel')}}"><img src="{{ asset('assets/img/folder_shared.svg') }}" alt="partage"><p>Personnel</p></a></li>
                 </ul>
             </div>
-            <span></span>
-            <li><a href="{{path('app_profil')}}"><img src="{{ asset('assets/img/account_circle.svg') }}" alt=""><p>Profil</p></a></li>
-            <li><a href=""><img src="{{ asset('assets/img/article.svg') }}" alt=""><p>Mentions légales</p></a></li>
+            <li><span></span></li>
+            <li><a href="{{path('app_profil')}}"><img src="{{ asset('assets/img/account_circle.svg') }}" alt="rond"><p>Profil</p></a></li>
+            <li><a href=""><img src="{{ asset('assets/img/article.svg') }}" alt="article"><p>Mentions légales</p></a></li>
         </ul>
     </nav>
     <nav class="quicknav">
@@ -65,18 +66,18 @@
     <aside class="dashboard">
         <h3>Gestion</h3>
         <ul>
-            <li><a href="{{path('app_accueil')}}"><img src="{{ asset('assets/img/home.svg') }}" alt=""><p>Accueil</p></a></li>
-            <li><a href="{{path('app_planning')}}"><img src="{{ asset('assets/img/calendar_month.svg') }}" alt=""><p>Calendrier</p></a></li>
-            <li><a href="{{path('app_rendu')}}"><img src="{{ asset('assets/img/event_upcoming.svg') }}" alt=""><p>Rendus</p></a></li>
+            <li><a href="{{path('app_accueil')}}"><img src="{{ asset('assets/img/home.svg') }}" alt="maison"><p>Accueil</p></a></li>
+            <li><a href="{{path('app_planning')}}"><img src="{{ asset('assets/img/calendar_month.svg') }}" alt="calendrier mois"><p>Calendrier</p></a></li>
+            <li><a href="{{path('app_rendu')}}"><img src="{{ asset('assets/img/event_upcoming.svg') }}" alt="bientot"><p>Rendus</p></a></li>
         </ul>
         <div class="bouton-menu-deroulant" onclick="togglemenuderoulant()">
             <h3>Espaces</h3>
-            <img id="expandIcon" src="{{ asset('assets/img/expand_more.svg') }}" alt="">
+            <img id="expandIcon" src="{{ asset('assets/img/expand_more.svg') }}" alt="voir plus">
         </div>
         <div class="espaces">
             <ul class="menu-deroulant">
-                <li><a href="{{path('app_buts3')}}"><img src="{{ asset('assets/img/school.svg') }}" alt=""><p>BUT S3</p></a></li>
-                <li><a href="{{path('app_personnel')}}"><img src="{{ asset('assets/img/folder_shared.svg') }}" alt=""><p>Personnel</p></a></li>
+                <li><a href="{{path('app_buts3')}}"><img src="{{ asset('assets/img/school.svg') }}" alt="écoles"><p>BUT S3</p></a></li>
+                <li><a href="{{path('app_personnel')}}"><img src="{{ asset('assets/img/folder_shared.svg') }}" alt="partage"><p>Personnel</p></a></li>
             </ul>
         </div>
         <p class="realistateurs">Réalisé par Nicolas, Guillaume et Kevin</p>
@@ -111,6 +112,6 @@
     </script>
     {% block body %}
     {% endblock %}
-
+    </div>
 </body>
 </html>

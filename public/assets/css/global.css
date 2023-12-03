@@ -5,7 +5,7 @@
     list-style: none;
 }
 body{
-    background-color: #f4f4f4;
+    background-color: #e4e4e4;
     font-family: 'Lato', sans-serif;
 }
 a{
@@ -89,6 +89,7 @@ a{
     padding-left: 20px;
     padding-right: 20px;
     background-color: #5495D8;
+    box-shadow: 0 0 5px;
 }
 .nav-ordinateur .Hamburger_icon{
     display: none;
@@ -148,7 +149,8 @@ a{
     padding-top:20px;
     padding-left: 20px;
 }
-.nav-mobile span{
+.nav-mobile li span{
+    display: block;
     width: 235px;
     height: 1px;
     background-color:black;
@@ -441,6 +443,7 @@ a{
     border-radius: 8px;
     border: none;
     background-color: #D81E1E;
+    justify-content: center;
 }
 @media screen and (max-width: 910px) {
     .main-rendu {
@@ -451,6 +454,67 @@ a{
       height: calc(100vh - 205px);
     }
   }
+@media screen and (max-width: 475px) {
+    .fc .fc-button {
+        /* background-color: transparent; */
+        border: 1px solid transparent;
+        border-radius: 0.25em;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 200;
+        line-height: 1;
+        padding: 0.2em 0.45em;
+        text-align: center;
+        user-select: none;
+        vertical-align: middle;
+    }
+    .fc .fc-toolbar-title {
+        font-size:  1.1em!important;
+        margin: 5px!important;
+    }
+}
+@media screen and (max-width: 360px) {
+    .fc .fc-button {
+        /* background-color: transparent; */
+        border: 1px solid transparent;
+        border-radius: 0.25em;
+        display: inline-block;
+        font-size: 0.9em;
+        font-weight: 400;
+        line-height: 0.4;
+        padding: 0.5em 0.25em;
+        text-align: center;
+        user-select: none;
+        vertical-align: middle;
+    }
+    .fc .fc-toolbar-title {
+        font-size:  1.1em!important;
+        margin: 5px!important;
+    }
+    .fc .fc-button-primary:disabled {
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 330px) {
+    .fc .fc-button {
+        /* background-color: transparent; */
+        border: 1px solid transparent;
+        border-radius: 0.25em;
+        display: inline-block;
+        font-size: 0.7em;
+        font-weight: 200;
+        line-height: 0.4;
+        padding: 0.2em 0.1em;
+        text-align: center;
+        user-select: none;
+        vertical-align: middle;
+    }
+    .fc .fc-toolbar-title {
+        font-size:  1.1em!important;
+        margin: 5px!important;
+    }
+}
+
   @media screen and (max-width: 520px) {
     .bouton_rendu_article {
       flex-direction: column;
